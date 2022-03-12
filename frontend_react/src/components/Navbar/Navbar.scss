@@ -1,13 +1,10 @@
 .app__navbar {
     width: 100%;
-  
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
     padding: 1rem 2rem;
     background: rgba(255, 255, 255, 0.25);
-    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -28,32 +25,10 @@
         width: 180px;
         height: 40px;
       }
-    //   @media screen and (max-width: 700px) {
-    //     width: 70px;
-    //     height: 40px;
-    //   }
+   
     }
   }
-//   .app__navbar-logo-name {
-//     display: flex;
-//     align-self: end;
-  
-//     img {
-        
-//             width: 156px;
-//             height: 28px;
-        
-  
-//       @media screen and (min-width: 2000px) {
-//         width: 180px;
-//         height: 40px;
-//       }
-//       @media screen and (max-width: 700px) {
-//         width: 130px;
-//         height: 20px;
-//       }
-//     }
-//   }
+
   
   .app__navbar-links {
     flex: 1;
@@ -82,10 +57,8 @@
         color: var(--gray-color);
         text-decoration: none;
         flex-direction: column;
-  
         text-transform: uppercase;
         font-weight: 500;
-  
         transition: all 0.3s ease-in-out;
   
         &:hover {
@@ -110,13 +83,10 @@
     height: 35px;
     border-radius: 50%;
     position: relative;
-  
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--secondary-color);
-  
-  
     svg {
       width: 70%;
       height: 70%;
@@ -129,17 +99,13 @@
       bottom: 0;
       right: 0;
       z-index: 5;
-  
       padding: 1rem;
-  
       width: 80%;
       height: 100vh;
-      
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
       flex-direction: column;
-      
       background: url('../../assets/bgWhite.png');
       background-color: var(--white-color);
       background-size: cover;
@@ -161,7 +127,6 @@
         padding: 0;
         height: 100%;
         width: 100%;
-  
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -194,4 +159,5 @@
     @media screen and (min-width: 900px) {
       display: none;
     }
+   
   }

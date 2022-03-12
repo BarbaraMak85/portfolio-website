@@ -7,24 +7,8 @@
       flex-direction: column;
     }
   }
- 
-  .app__error__message__form{
-    color:red;
-    font-size: 0.8rem;
-    font-family: var(--font-base);
-    background-color: transparent !important;
-    box-shadow: none;
-    &:hover{
-      box-shadow: none !important;
-    }
-  }
-  .checkbox__form{
-    background-color: transparent !important;
-    box-shadow: none;
-    &:hover{
-      box-shadow: none !important;
-    }
-    
+  .error__message{
+      color: red;
   }
   .app__footer-cards {
     width: 60%;
@@ -85,7 +69,7 @@
   }
   
   .app__footer-form {
-    width: 100%;
+    width: 60%;
     flex-direction: column;
     margin: 1rem 2rem;
   

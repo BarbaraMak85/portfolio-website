@@ -1,10 +1,9 @@
 import React from "react";
 import { images } from "../../constants";
-import "./Footer.scss";
+import "./Contact.scss";
 import * as Yup from "yup";
 import emailjs from "emailjs-com";
 import { Formik, Form, ErrorMessage } from "formik";
-import { AppWrap, MotionWrap } from "../../wrapper";
 
 const formValidationSchema = Yup.object().shape({
   nameAndSurname: Yup.string().required("Proszę o podanie imienia i nazwiska."),
@@ -19,10 +18,10 @@ const formValidationSchema = Yup.object().shape({
   ),
 });
 
-const Footer = () => {
+const Contact = () => {
   return (
     <>
-      <h2 className="head-text">Skontaktuj się ze mną</h2>
+      <h2 className="head-text">Take a coffee & chat with me</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
@@ -70,7 +69,7 @@ const Footer = () => {
         }}
       >
         {({ values, handleChange }) => (
-          <Form className="app__flex">
+          <Form>
             <div className="app__footer-form app__flex">
               <div className="app__flex">
                 <input
@@ -81,9 +80,9 @@ const Footer = () => {
                   value={values.nameAndSurname}
                   onChange={handleChange}
                 />
-              </div>
-              <div className="app__error__message__form ">
-                <ErrorMessage name="nameAndSurname" />
+                <div className="error__message">
+                  <ErrorMessage name="nameAndSurname" />
+                </div>
               </div>
 
               <div className="app__flex">
@@ -95,9 +94,9 @@ const Footer = () => {
                   value={values.email}
                   onChange={handleChange}
                 />
-              </div>
-              <div className="app__error__message__form">
-                <ErrorMessage name="email" />
+                <div className="error__message">
+                  <ErrorMessage name="email" />
+                </div>
               </div>
 
               <div className="app__flex">
@@ -109,9 +108,9 @@ const Footer = () => {
                   value={values.subject}
                   onChange={handleChange}
                 />
-              </div>
-              <div className="app__error__message__form">
-                <ErrorMessage name="subject" />
+                <div className="error__message">
+                  <ErrorMessage name="subject" />
+                </div>
               </div>
 
               <div className="app__flex">
@@ -123,28 +122,28 @@ const Footer = () => {
                   value={values.message}
                   onChange={handleChange}
                 />
-              </div>
-              <div className="app__error__message__form">
-                <ErrorMessage name="message" />
+                <div className="error__message">
+                  <ErrorMessage name="message" />
+                </div>
               </div>
 
-              <div className="checkbox__form">
+              <div className="app__flex">
                 <input
+                  className="p-text"
                   type="checkbox"
                   name="acceptTerms"
                   id="acceptTerms"
                   checked={values.acceptTerms}
                   onChange={handleChange}
                 />
+
+                <p>
+                  Wyrażam zgodę na przetwarzanie danych osobowych przez Barbara
+                  Makowiec w celu przesłania oferty handlowej i przesyłanie
+                  informacji drogą elektroniczną
+                </p>
               </div>
-
-              <p className="p-text">
-                Wyrażam zgodę na przetwarzanie danych osobowych przez Barbara
-                Makowiec w celu przesłania oferty handlowej i przesyłanie
-                informacji drogą elektroniczną
-              </p>
-
-              <div className="app__error__message__form">
+              <div className="error__message">
                 <ErrorMessage name="acceptTerms" />
               </div>
 
@@ -156,8 +155,5 @@ const Footer = () => {
     </>
   );
 };
-export default AppWrap(
-  MotionWrap(Footer, "app__footer"),
-  "kontakt",
-  "app__whitebg"
-);
+
+export default Contact;
